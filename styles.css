@@ -140,6 +140,10 @@ audio::-webkit-media-controls-volume-slider {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .banner {
         flex-direction: column;
         align-items: center;
