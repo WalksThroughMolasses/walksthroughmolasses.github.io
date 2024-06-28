@@ -7,7 +7,7 @@ body {
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     margin-top: 0;
 }
 
@@ -17,15 +17,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 640px;
+    height: 420px;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .podcast-artwork {
-    width: 480px;
-    height: 480px;
+    width: 340px;
+    height: 340px;
     object-fit: cover;
     margin-right: 100px;
     border-radius: 10px;
@@ -42,24 +42,22 @@ body {
 }
 
 .podcast-link img {
-    width: 60px; /* Adjust size of icons as needed */
+    width: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .podcast-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .content {
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .content-box {
@@ -69,7 +67,7 @@ body {
     margin-bottom: 20px;
     border-radius: 5px;
     width: 100%;
-    max-width: 1560px;
+    max-width: 1080px;
     box-sizing: border-box;
     margin: 0 auto 32px;
 }
@@ -81,10 +79,9 @@ body {
 }
 
 .episode-artwork {
-    width: 320px;
-    height: 320px;
+    width: 225px;
+    height: 225px;
     object-fit: cover;
-    margin-right: 32px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
 }
@@ -109,12 +106,10 @@ body {
     padding-left: 20px;
 }
 
-/* Apply styles to the audio player controls */
 audio {
     margin-top: 10px;
-    margin-bottom: 40px;
-    transform: scale(1.3);
-    width: 76.92%;
+    margin-bottom: 25px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -145,8 +140,8 @@ audio::-webkit-media-controls-volume-slider {
 @media (max-width: 768px) {
     .episode-artwork,
     .podcast-artwork {
-        width: 250px;
-        height: 250px;
+        width: 160px;
+        height: 160px;
         margin: 0 25px;
     }
     .title {
