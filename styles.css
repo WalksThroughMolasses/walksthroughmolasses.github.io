@@ -11,14 +11,22 @@ body {
     margin-top: 0;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .banner {
     background-color: #0e134d;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 420px;
+    height: auto;
     width: 100%;
+    padding: 40px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -74,8 +82,8 @@ body {
 
 .episode-content {
     display: flex;
-    align-items: flex-start; /* Align items at the top of the content box */
-    flex-grow: 1; /* Allow content to grow to fill available space */
+    align-items: flex-start;
+    flex-grow: 1;
 }
 
 .episode-artwork {
@@ -83,11 +91,11 @@ body {
     height: 225px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
 }
 
 .episode-info {
-    flex-grow: 1; /* Allow info to grow to fill available space */
+    flex-grow: 1;
 }
 
 .episode-text {
@@ -98,12 +106,6 @@ body {
 .episode-text p {
     font-family: sans-serif;
     margin-bottom: 10px;
-}
-
-.episode-text ul {
-    font-family: sans-serif;
-    margin-top: 0;
-    padding-left: 20px;
 }
 
 audio {
@@ -138,18 +140,33 @@ audio::-webkit-media-controls-volume-slider {
 }
 
 @media (max-width: 768px) {
-    .episode-artwork,
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
     .podcast-artwork {
-        width: 160px;
-        height: 160px;
-        margin: 0 25px;
+        width: 50vw;
+        height: 50vw;
+        margin: 0 10px;
+    }
+    .episode-artwork {
+        width: 80vw;
+        height: 80vw;
     }
     .title {
-        font-size: 2rem;
-        margin: 0 25px;
+        font-size: 1.2rem;
+        margin: 0 15px;
+        text-align: center;
     }
-
+    .episode-text {
+        line-height: 1.6;
+        margin: 0 10px;
+    }
+    .episode-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .episode-artwork {
+        margin-bottom: 20px;
+    }
 }
-
-
-
