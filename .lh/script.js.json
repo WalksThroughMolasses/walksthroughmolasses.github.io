@@ -1,0 +1,38 @@
+{
+    "sourceFile": "script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1729310147032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729310166954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n     fft = new p5.FFT()\r\n }\r\n \r\n function draw() {\r\n-    backgorund(0)\r\n+    background(0) // pretty sure that's black\r\n+\r\n+\r\n }\r\n \r\n function mouseClicked() {\r\n     if (ambience.isPlaying()) {\r\n"
+                },
+                {
+                    "date": 1729310173630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n function draw() {\r\n     background(0) // pretty sure that's black\r\n \r\n-\r\n+    var wave = fft.waveform()\r\n }\r\n \r\n function mouseClicked() {\r\n     if (ambience.isPlaying()) {\r\n"
+                },
+                {
+                    "date": 1729310233476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,12 @@\n function draw() {\r\n     background(0) // pretty sure that's black\r\n \r\n     var wave = fft.waveform()\r\n+\r\n+    for (var i = 0; i < width; i++) {\r\n+        var index = floor(map(i, 0, width, 0, wave.length))\r\n+    }\r\n }\r\n \r\n function mouseClicked() {\r\n     if (ambience.isPlaying()) {\r\n"
+                },
+                {
+                    "date": 1729310252698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n     var wave = fft.waveform()\r\n \r\n     for (var i = 0; i < width; i++) {\r\n         var index = floor(map(i, 0, width, 0, wave.length))\r\n+\r\n+        var x = i\r\n+        var y = wave[index] * 300\r\n     }\r\n }\r\n \r\n function mouseClicked() {\r\n"
+                },
+                {
+                    "date": 1729310286689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,17 +9,19 @@\n     fft = new p5.FFT()\r\n }\r\n \r\n function draw() {\r\n-    background(0) // pretty sure that's black\r\n+    background(255)\r\n+    stroke(0)\r\n \r\n     var wave = fft.waveform()\r\n \r\n     for (var i = 0; i < width; i++) {\r\n         var index = floor(map(i, 0, width, 0, wave.length))\r\n \r\n         var x = i\r\n-        var y = wave[index] * 300\r\n+        var y = wave[index] * 200\r\n+        point(x, y)\r\n     }\r\n }\r\n \r\n function mouseClicked() {\r\n"
+                }
+            ],
+            "date": 1729310147032,
+            "name": "Commit-0",
+            "content": "var ambience\r\n\r\nfunction preload() {\r\n    ambience = loadSound('casurina_sands.mp3')\r\n}\r\n\r\nfunction setup() {\r\n    createCanvas(windowWidth, windowHeight)\r\n    fft = new p5.FFT()\r\n}\r\n\r\nfunction draw() {\r\n    backgorund(0)\r\n}\r\n\r\nfunction mouseClicked() {\r\n    if (ambience.isPlaying()) {\r\n        ambience.pause()\r\n    } else {\r\n        ambience.play()\r\n    }\r\n}"
+        }
+    ]
+}

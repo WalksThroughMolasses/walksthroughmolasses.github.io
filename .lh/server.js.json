@@ -1,0 +1,22 @@
+{
+    "sourceFile": "server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1729310663102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729310685097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,13 @@\n const app = express();\r\n const port = process.env.PORT || 3000;\r\n const hostname = '0.0.0.0';\r\n \r\n-// Serve static files (HTML, CSS, JS, etc.) from the 'public' directory\r\n app.use(express.static(path.join(__dirname, 'public')));\r\n \r\n-// Route for serving the HTML page\r\n app.get('/', (req, res) => {\r\n   res.sendFile(path.join(__dirname, 'public', 'index.html'));\r\n });\r\n \r\n-// Start the server\r\n app.listen(port, () => {\r\n     console.log(`Server is running on http://${hostname}:${port}`);\r\n });\r\n"
+                }
+            ],
+            "date": 1729310663102,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\nconst path = require('path');\r\n\r\nconst app = express();\r\nconst port = process.env.PORT || 3000;\r\nconst hostname = '0.0.0.0';\r\n\r\n// Serve static files (HTML, CSS, JS, etc.) from the 'public' directory\r\napp.use(express.static(path.join(__dirname, 'public')));\r\n\r\n// Route for serving the HTML page\r\napp.get('/', (req, res) => {\r\n  res.sendFile(path.join(__dirname, 'public', 'index.html'));\r\n});\r\n\r\n// Start the server\r\napp.listen(port, () => {\r\n    console.log(`Server is running on http://${hostname}:${port}`);\r\n});\r\n"
+        }
+    ]
+}
