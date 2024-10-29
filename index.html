@@ -3,102 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7W7JLBQQ5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <meta name="author" content="Ryan Pemberton">
+	<meta property="og:type" content="website">
+	<meta name="description" content="I make podcasts.">
+	<meta property="og:description" content="I make podcasts.">
+	<meta property="og:title" content="Ryan Pemberton">
+	<meta name="keywords" content="pemberton, sound design, podcast producer, audio editor, reaper, sydney, australia">
 
-        gtag('config', 'G-J7W7JLBQQ5');
-    </script>
-    <title>Umwelt Podcast</title>
-    <link rel="icon" type="image/x-icon" href="/images/whale_favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Suez+One&display=swap" rel="stylesheet">
+    <title>Ryan Pemberton</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.0/addons/p5.sound.js"></script>
+
+    <link rel="icon" href="whale_favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <h1 class="title"><a href="/">Ryan Pemberton</a></h1>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#audio">Audio</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#coding">Coding</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="wrapper">
-        <div class="banner">
-            <img src="images/MAIN_TILE_1MB.jpg" alt="Umwelt Podcast Main Image Tile" class="podcast-artwork">
-            <div class="title">
-                <h1>Umwelt</h1>
-                <p>A podcast about what it's like inside other minds.</p>
-                <div class="listen-links">
-                <a href="https://podcasts.apple.com/au/podcast/umwelt/id1749923040" class="podcast-link">
-                    <img src="images/apple-podcasts.png" alt="Listen on Apple Podcasts">
-                </a>
-                <a href="https://open.spotify.com/show/4AszH9ZNMe9OA9FjXlZcK2" class="podcast-link">
-                    <img src="images/spotify.png" alt="Listen on Spotify">
-                </a>
-                <a href="https://pca.st/0t4m9ur3" class="podcast-link">
-                    <img src="images/pocket-casts.png" alt="Listen on Pocket Casts">
-                </a>
+        <main>
+            <div id="dummy">
             </div>
-        </div>
-        </div>
-        <div class="content">
-            <div class="content-box">
-                <div class="episode-content">
-                    <img src="images/INDIV_TILE_WHALE_V2_500KB.jpg" alt="Whale Episode Artwork" class="episode-artwork">
-                    <div class="episode-text">
-                        <h2 class="title">#1 Whales: What Are They Saying</h2>
-                        <audio controls preload="none">
-                            <source src="https://mcdn.podbean.com/mf/download/hhkrv882ju7zn8v9/Umwelt_Whales_TomMustill_240604.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                        <p><a href="https://www.tommustill.com/">Tom Mustill</a> is a biologist, wildlife filmmaker and author of the book <a href="https://www.tommustill.com/how-to-speak-whale">How to Speak Whale: A Voyage into the Future of Animal Communication.</a></p>
-                        <p>In this episode, we talk about <a href="https://www.youtube.com/watch?v=8u-MW7vF0-Y&ab_channel=SanctuaryCruises">the time a whale jumped on Tom</a>, the unexpectedly popular album of whale song that galvanised the Save the Whales movement, and the researchers working on using artificial intelligence to understand whale communication.</p>
-                        <p>The whale recordings on this episode are courtesy of Ocean Alliance (<a href="https://whale.org/">https://whale.org/</a>)</p>
+            <section id="audio">
+                <h2>Audio</h2>
+                <p>I'm a podcast producer, sound engineer, and teacher.</p>
+                <p>I created <a href="https://umweltpodcast.com.au/" target="_blank" rel="noopener noreferrer">Umwelt</a>, a podcast about how different animals experience the world.</p>
+                <p>I've sound designed and mixed podcasts for 
+                    <a href="https://www.theguardian.com/profile/ryan-pemberton" target="_blank" rel="noopener noreferrer">The Guardian</a>, 
+                    <a href="https://www.abc.net.au/listen/programs/rn-presents/the-strange-case-of-the-body-on-the-beach/11517516" target="_blank" rel="noopener noreferrer">ABC</a>, and 
+                    <a href="https://www.artsimone.com/podcast" target="_blank" rel="noopener noreferrer">iHeart Australia</a>.
+                </p>
+                <p>Currently, I'm the senior audio engineer for iHeartPodcasts Australia</p>
+                <p>Here are some of the podcasts I've worked on:</p>
+                <div class="portfolio-grid"></div>
+                <!-- Modal template -->
+                <div class="modal" id="podcastModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title"></h2>
+                            <button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-artwork">
+                                <img src="" alt="">
+                            </div>
+                            <div class="modal-details">
+                                <p class="description"></p>
+                                <h3>Publisher</h3>
+                                <p class="client"></p>
+                                <h3>Role</h3>
+                                <p class="role"></p>
+                                <div class="links"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="content-box">
-                <div class="episode-content">
-                    <img src="images/INDIV_TILE_SHURMP_V2_500KB.jpg" alt="Mantis Shrimp Episode Artwork" class="episode-artwork">
-                    <div class="episode-text">
-                        <h2 class="title">#2 Mantis Shrimp: World's Fastest Punch, World's Weirdest Eyes</h2>
-                        <audio controls preload="none">
-                            <source src="https://mcdn.podbean.com/mf/download/ixrrzvkbvr6czst3/Umwelt_MantisShrimp_240611.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                        <p><a href="https://en.wikipedia.org/wiki/Justin_Marshall_(neuroscientist)">Justin Marshall</a> is a neuroscientist and ecologist whose work focuses on how animals perceive their environment, particularly through vision.</p>
-                        <p>In this episode, we talk about the sudden surge in the mantis shrimp's popularity (in large part due to a discovery Justin made), how what we thought we knew about mantis shrimp colour vision was upended, and the societal value of spending 3+ years staring at a worm.</p>
-                        <p><a href="https://mwarrangements.com/">Michael Webber's website.</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="content-box">
-                <div class="episode-content">
-                    <img src="images/INDIV_TILE_PORTIA_V2_500KB.jpg" alt="Portia Spider Episode Artwork" class="episode-artwork">
-                    <div class="episode-text">
-                        <h2 class="title">#3 Portia: The Eight-Legged Genius</h2>
-                        <audio controls preload="none">
-                            <source src="https://mcdn.podbean.com/mf/download/eeur93kxvsaszmgm/Umwelt_Portia_FionaCross_240618.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                        <p><a href="https://www.doctorspider.net/">Fiona Cross</a> is an arachnologist whose research focuses on spider cognition.</p>
-                        <p>In this episode, we talk about how Fiona went from being terrified of spiders to studying them, the incredible strategies that the portia spider uses to hunt other spiders, and how Fiona and her colleagues tested whether portia can count.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="content-box">
-                <div class="episode-content">
-                    <img src="images/INDIV_TILE_OCCY_V2_500KB.jpg" alt="Octopus Shrimp Episode Artwork" class="episode-artwork">
-                    <div class="episode-text">
-                        <h2 class="title">#4 Octopuses: Maybe We're Not So Different</h2>
-                        <audio controls preload="none">
-                            <source src="https://mcdn.podbean.com/mf/download/8mydw7y4dpimcfd2/Umwelt_Octopuses_DavidScheel_240625.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                        <p><a href="https://alaskaoctopus.com/">David Scheel</a> is an ecologist and author of the book, Many Things Under a Rock: The Mysteries of Octopuses.</p>
-                        <p>In this episode, we talk about octopus tool use, octopus dreams, and whether octopus arms have minds of their own.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>A complete list of my podcast work and CV is available <a href="#contact">on request.</a></p>
+            </section>
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <p>I teach podcasting at the University of Sydney.</p>
+                <p>I also occasionally lecture for other educational institutions and community organisations.</p>
+                <p>I'm available for <a href="#contact">one-on-one tutoring, as well as consultation</a> for individuals and businesses to develop and improve their podcast production workflows.</p>
+            </section>
+            <section id="coding">
+                <h2>Coding</h2>
+                <p>I often write code to automate aspects of my podcast work (usually in Python or Lua).</p>
+                <p>I also do <a href="https://birdsunderthespacestation.com/" target="_blank">creative programming projects</a> in my spare time.</p>
+                <p>My colleague Alex Tighe and I developed a system for delivering real-time, localized weather updates
+                    <a href="https://www.linkedin.com/pulse/your-news-now-how-iheart-built-australias-most-advanced-coombes/", target="_blank" rel="noopener noreferrer">into a news podcast,</a>
+                    without using AI. 
+                </p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="7e59f5ff-daa8-41e5-8565-15e7df9a7974">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea name="message" required></textarea>
+                    <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <button type="submit">Submit</button>
+                
+                </form>
+            </section>
+        </main>
     </div>
+    <div id="bells"></div>
+    <script src="sketch.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
