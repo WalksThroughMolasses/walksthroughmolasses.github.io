@@ -167,9 +167,6 @@ let bellsSketch = function(p) {
 
   let mousePressed = false
 
-  const canvasWidth = p.windowWidth;
-  const canvasHeight = p.windowHeight;
-
   // TODO: see if there's a way to make the ripple trigger the bells itself
 
   let damping = 1;
@@ -190,7 +187,7 @@ let bellsSketch = function(p) {
 
   p.setup = function() {
     // setup canvas
-    let canvas = p.createCanvas(canvasWidth, canvasHeight, this.WEBGL);
+    let canvas = p.createCanvas(p.windowWidth, p.windowHeight, this.WEBGL);
     canvas.parent("bells");
     // canvas.mousePressed(createRipple);
     p.pixelDensity(1);
@@ -205,11 +202,11 @@ let bellsSketch = function(p) {
     // }
 
     // create buffers
-    currBuff = p.createGraphics(canvasWidth, canvasHeight);
+    currBuff = p.createGraphics(p.windowWidth, p.windowHeight);
     currBuff.pixelDensity(1);
     currBuff.noSmooth();
 
-    prevBuff = p.createGraphics(canvasWidth, canvasHeight);
+    prevBuff = p.createGraphics(p.windowWidth, p.windowHeight);
     prevBuff.pixelDensity(1);
     prevBuff.noSmooth();
     
@@ -217,7 +214,7 @@ let bellsSketch = function(p) {
     p.shader(rippleShader);
 
     rippleShader.setUniform("damping", damping);
-    rippleShader.setUniform("res", [canvasWidth, canvasHeight]);
+    rippleShader.setUniform("res", [p.windowWidth, p.windowHeight]);
 
   }
 
@@ -242,6 +239,24 @@ let bellsSketch = function(p) {
       mousePressed = false
     }
   
+  p.windowResized = () => {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+
+    // create buffers
+    currBuff = p.createGraphics(p.windowWidth, p.windowHeight);
+    currBuff.pixelDensity(1);
+    currBuff.noSmooth();
+
+    prevBuff = p.createGraphics(p.windowWidth, p.windowHeight);
+    prevBuff.pixelDensity(1);
+    prevBuff.noSmooth();
+
+    // set the shader
+    p.shader(rippleShader);
+
+    rippleShader.setUniform("damping", damping);
+    rippleShader.setUniform("res", [window.innerWidth, window.innerHeight]);
+  };
 
     // add rain drop
     p.stroke(p.random(255));
@@ -377,4 +392,5 @@ let bellsSketch = function(p) {
 
     return distance < bellRadiiPlusRipple;
   }
+
 }

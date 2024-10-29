@@ -12,6 +12,7 @@ body {
     font-size: medium;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -115,7 +116,7 @@ section {
 }
 
 form {
-    margin: 20px 0 100px 0;
+    margin: 20px 20px 100px 0;
     align-items: center;
     text-align: center;
 }
@@ -195,6 +196,9 @@ button {
     height: 100%;
     object-fit: cover;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    outline: none;
 }
 
 /* Modal */
