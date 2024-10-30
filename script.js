@@ -81,7 +81,7 @@ const podcasts = [
         title: "Trapped",
         client: "The Australian War Memorial",
         role: "Sound designer and mix engineer",
-        description: "A podcast exploring how different animals experience the world.",
+        description: "Trapped is a six part series about a group of Australian airmen stranded on Japanese-occupied Timor during the Second World War. Using diaries of the airmen, wartime records and interviews with survivors, Trapped brings to life one of the greatest stories of survival and escape of the Pacific War. A true story of leadership, courage, mateship, and, at times, cruelty and violence that played out on a remote tropical island during one of history's bloodiest conflicts.",
         image: "/images/trapped-artwork.jpg",
         links: [
             { label: "Website", url: "https://www.awm.gov.au/learn/podcasts/trapped" }
