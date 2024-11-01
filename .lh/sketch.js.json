@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1730171624833,
@@ -40,6 +40,10 @@
                 {
                     "date": 1730177329877,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -239,16 +239,16 @@\n       mousePressed = false\r\n     }\r\n   \r\n   p.windowResized = () => {\r\n-    p.resizeCanvas(window.innerWidth, window.innerHeight);\r\n+    p.resizeCanvas(p.windowWidth, p.windowHeight);\r\n \r\n     // create buffers\r\n-    currBuff = p.createGraphics(window.innerWidth, window.innerHeight);\r\n+    currBuff = p.createGraphics(p.windowWidth, p.windowHeight);\r\n     currBuff.pixelDensity(1);\r\n     currBuff.noSmooth();\r\n \r\n-    prevBuff = p.createGraphics(window.innerWidth, window.innerHeight);\r\n+    prevBuff = p.createGraphics(p.windowWidth, p.windowHeight);\r\n     prevBuff.pixelDensity(1);\r\n     prevBuff.noSmooth();\r\n \r\n     // set the shader\r\n"
+                },
+                {
+                    "date": 1730439443246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n   let mousePressed = false\r\n \r\n   // TODO: see if there's a way to make the ripple trigger the bells itself\r\n \r\n-  let damping = 1;\r\n+  let damping = 0.98;\r\n \r\n   let bells = [];\r\n   const bellNotes = {\r\n     A3: 160,\r\n"
                 }
             ],
             "date": 1730171624833,

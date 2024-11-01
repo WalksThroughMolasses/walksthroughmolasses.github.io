@@ -169,7 +169,7 @@ let bellsSketch = function(p) {
 
   // TODO: see if there's a way to make the ripple trigger the bells itself
 
-  let damping = 1;
+  let damping = 0.98;
 
   let bells = [];
   const bellNotes = {
