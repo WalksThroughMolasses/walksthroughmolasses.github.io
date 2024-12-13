@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1729825368339,
@@ -24,6 +24,10 @@
                 {
                     "date": 1730439452745,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n             <section id=\"coding\">\r\n                 <h2>Coding</h2>\r\n                 <p>I often write code to automate aspects of my podcast work (usually in Python or Lua).</p>\r\n                 <p>I also do <a href=\"https://birdsunderthespacestation.com/\" target=\"_blank\">creative programming projects</a> in my spare time.</p>\r\n-                <p>My colleague Alex Tighe and I developed a system for delivering real-time, localized weather updates\r\n+                <p>My colleague Alex Tighe and I developed a system for delivering real-time, localised weather updates\r\n                     <a href=\"https://www.linkedin.com/pulse/your-news-now-how-iheart-built-australias-most-advanced-coombes/\", target=\"_blank\" rel=\"noopener noreferrer\">into a news podcast,</a>\r\n                     without using AI. \r\n                 </p>\r\n             </section>\r\n"
+                },
+                {
+                    "date": 1734067762034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,16 +41,15 @@\n             <div id=\"dummy\">\r\n             </div>\r\n             <section id=\"audio\">\r\n                 <h2>Audio</h2>\r\n-                <p>I'm a podcast producer, sound engineer, and teacher.</p>\r\n+                <p>I'm a podcast producer, audio engineer, and teacher.</p>\r\n                 <p>I created <a href=\"https://umweltpodcast.com.au/\" target=\"_blank\" rel=\"noopener noreferrer\">Umwelt</a>, a podcast about how different animals experience the world.</p>\r\n                 <p>I've sound designed and mixed podcasts for \r\n                     <a href=\"https://www.theguardian.com/profile/ryan-pemberton\" target=\"_blank\" rel=\"noopener noreferrer\">The Guardian</a>, \r\n                     <a href=\"https://www.abc.net.au/listen/programs/rn-presents/the-strange-case-of-the-body-on-the-beach/11517516\" target=\"_blank\" rel=\"noopener noreferrer\">ABC</a>, and \r\n                     <a href=\"https://www.artsimone.com/podcast\" target=\"_blank\" rel=\"noopener noreferrer\">iHeart Australia</a>.\r\n                 </p>\r\n-                <p>Currently, I'm the senior audio engineer for iHeartPodcasts Australia</p>\r\n                 <p>Here are some of the podcasts I've worked on:</p>\r\n                 <div class=\"portfolio-grid\"></div>\r\n                 <!-- Modal template -->\r\n                 <div class=\"modal\" id=\"podcastModal\">\r\n"
                 }
             ],
             "date": 1729825368339,
