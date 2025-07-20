@@ -45,7 +45,7 @@ const podcasts = [
         id: "news-club",
         title: "News Club",
         client: "Squiz Media",
-        role: "Creator, host, producer, sound designer and mix engineer",
+        role: "Producer, editor and mix engineer",
         description: "News Club is the place to go for conversations about the news. It’s a step beyond the headlines with curated perspectives about the events and people shaping and making headlines.",
         image: "/images/news-club-artwork.jpg",
         links: [
