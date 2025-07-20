@@ -30,6 +30,42 @@ const podcasts = [
         ]
     },
     {
+        id: "hold-the-moment",
+        title: "Hold The Moment",
+        client: "Dementia Australia & Deadset Studios",
+        role: "Sound designer and mix engineer",
+        description: "Dementia Australia's Hold the Moment podcast shares uplifting stories about people living with dementia and their loved ones.",
+        image: "/images/htm-artwork.jpg",
+        links: [
+            { label: "Website", url: "https://www.dementia.org.au/living-dementia/hold-moment-podcast" }
+            // { label: "Apple Podcasts", url: "https://podcasts.apple.com/au/podcast/umwelt/id1749923040" }
+        ]
+    },
+    {
+        id: "news-club",
+        title: "News Club",
+        client: "Squiz Media",
+        role: "Creator, host, producer, sound designer and mix engineer",
+        description: "News Club is the place to go for conversations about the news. It’s a step beyond the headlines with curated perspectives about the events and people shaping and making headlines.",
+        image: "/images/news-club-artwork.jpg",
+        links: [
+            { label: "Website", url: "https://thesquiz.com.au/podcasts/news-club" }
+            // { label: "Apple Podcasts", url: "https://podcasts.apple.com/au/podcast/umwelt/id1749923040" }
+        ]
+    },
+    {
+        id: "all-the-best",
+        title: "All The Best",
+        client: "FBi Radio",
+        role: "Executive producer",
+        description: "A weekly half-hour national radio program and podcast devoted to short-form features, documentaries and fiction.",
+        image: "/images/atb-artwork.jpg",
+        links: [
+            { label: "Website", url: "https://allthebestradio.com/" }
+            // { label: "Apple Podcasts", url: "https://podcasts.apple.com/au/podcast/umwelt/id1749923040" }
+        ]
+    },
+    {
         id: "find-and-tell",
         title: "Find and Tell",
         client: "iHeartPodcast Australia",
