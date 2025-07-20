@@ -33,7 +33,7 @@ const podcasts = [
         id: "hold-the-moment",
         title: "Hold The Moment",
         client: "Dementia Australia & Deadset Studios",
-        role: "Sound designer and mix engineer",
+        role: "Sound designer and mix engineer (season 2)",
         description: "Dementia Australia's Hold the Moment podcast shares uplifting stories about people living with dementia and their loved ones.",
         image: "/images/htm-artwork.jpg",
         links: [
@@ -151,7 +151,7 @@ const podcasts = [
         id: "trace",
         title: "Trace",
         client: "ABC",
-        role: "Producer and audio editor",
+        role: "Producer and audio editor (season 1)",
         description: "An investigative podcast hosted by ABC journalist Rachael Brown. Series 1 reviews the cold case murder of Maria James who was stabbed in her Melbourne bookshop in 1980.",
         image: "/images/trace-artwork.jpg",
         links: [
