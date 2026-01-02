@@ -1,176 +1,347 @@
-body {
-    margin: 0;
-    background-color: #0e134d;
+:root {
+    --main-bg-color: white;
+    --primary-color: black;
+    --font-size-large: 2.25rem;
+    --modal-artwork-size: 225px;
 }
 
-.title {
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.6rem;
-    margin-top: 0;
+body {
+    background-color: var(--main-bg-color);
+    color: var(--primary-color);
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: 648px;
+    margin: 0 auto; 
+    padding-top: 20px;
 }
 
-.banner {
-    background-color: #0e134d;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    padding: 40px;
+#dummy{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
     margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.podcast-artwork {
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    margin-right: 100px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
-}
-
-.listen-links {
     display: flex;
+    align-items: center;
     justify-content: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    outline: none;
 }
 
-.podcast-link {
-    margin: 0 10px;
-}
-
-.podcast-link img {
-    width: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-    height: auto;
-}
-
-.podcast-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1rem;
-}
-
-.content {
-    padding: 20px;
-    font-size: 1rem;
-}
-
-.content-box {
-    background-color: white;
-    border: 2px solid black;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+#dummy img {
     width: 100%;
-    max-width: 1080px;
-    box-sizing: border-box;
-    margin: 0 auto 32px;
-}
-
-.episode-content {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 1;
-}
-
-.episode-artwork {
-    width: 225px;
-    height: 225px;
+    height: 100%;
     object-fit: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 10px 0;
+}
+
+.title {
+    font-size: var(--font-size-large);
+    font-family: 'Inter';
+    margin: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
-}
-
-.episode-info {
-    flex-grow: 1;
-}
-
-.episode-text {
-    line-height: 1.6;
-    margin: 0 25px;
-}
-
-.episode-text p {
-    font-family: sans-serif;
-    margin-bottom: 10px;
-}
-
-audio {
-    margin-top: 10px;
-    margin-bottom: 25px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 1rem;
     display: block;
-}
-
-
-/* Main control panel */
-audio::-webkit-media-controls-panel {
+    font-style: bold;
     font-size: 1rem;
 }
 
-/* Play/pause button text */
-audio::-webkit-media-controls-play-button::before {
-    font-size:1rem;
+.navbar a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
-/* Time display (current time and time remaining) */
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    font-size: 1rem;
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 
-/* Volume control text */
-audio::-webkit-media-controls-volume-slider {
-    font-size: 1rem;
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+main a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10px;
+}
+
+form {
+    margin: 20px 20px 100px 0;
+    align-items: center;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 0.75rem 0;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; 
+    
+}
+
+textarea {
+    resize: vertical;
+    height: 6rem;
+    font-family: inherit;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0.75rem 0;
+    background-color: var(--primary-color); 
+    color: white;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; 
+    
+}
+
+#bells {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: auto; 
+    margin-top: auto;
+    border-top: 1px solid var(--primary-color);
+}
+
+/* Grid layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f1f5f9;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    outline: none;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    padding: 1rem;
+}
+
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 0 1.2rem 1.2rem 1.2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.close-button {
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: var(--modal-artwork-size, 150px) 1fr;
+    gap: 1.2rem;
+}
+
+.modal-artwork {
+    width: var(--modal-artwork-size);
+    height: var(--modal-artwork-size);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.modal-artwork a:hover {
+    cursor: pointer;
+}
+
+.modal-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details h3 {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.modal-details p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+@media only screen and (max-width: 640px) {
+    .wrapper{
+        width: 90vw;
     }
 
-    .banner {
-        flex-direction: column;
-        align-items: center;
-    }
-    .podcast-artwork {
-        width: 50vw;
-        height: 50vw;
-        margin: 0 10px;
-    }
-    .episode-artwork {
-        width: 80vw;
-        height: 80vw;
-    }
     .title {
-        font-size: 1.2rem;
-        margin: 0 15px;
-        text-align: center;
+        font-size: 1.4rem
     }
-    .episode-text {
-        line-height: 1.6;
-        margin: 0 10px;
+
+    .toggle-button {
+        display: flex;
     }
-    .episode-content {
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction:  column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
         flex-direction: column;
-        align-items: center;
+        text-align: right;
     }
-    .episode-artwork {
-        margin-bottom: 20px;
+
+    .navbar-links li{
+        padding: .5rem 1rem;
+        font-size: 1.2rem;
+        font-style: bold;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-artwork {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
     }
 }
