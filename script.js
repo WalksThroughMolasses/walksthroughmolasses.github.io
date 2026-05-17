@@ -25,7 +25,7 @@ const podcasts = [
         description: "A podcast exploring how different animals experience the world through their unique perceptual systems.",
         image: "/images/umwelt-artwork.jpg",
         links: [
-            { label: "Website", url: "https://umweltpodcast.com.au/" }
+            { label: "Website", url: "https://ryanpemberton.com/umwelt" }
             // { label: "Apple Podcasts", url: "https://podcasts.apple.com/au/podcast/umwelt/id1749923040" }
         ]
     },
